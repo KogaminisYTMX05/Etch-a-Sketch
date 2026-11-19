@@ -1,0 +1,61 @@
+/* Reseteo básico para evitar márgenes no deseados */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4f4f9;
+    min-height: 100vh;
+    padding-top: 20px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.controls {
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Contenedor principal de la cuadrícula */
+#grid-container {
+    display: flex;
+    flex-wrap: wrap; /* Esto es lo que hace que los divs salten de línea y formen la cuadrícula */
+    width: 960px;
+    height: 960px;
+    background-color: white;
+    border: 2px solid #333;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Estilos para cada cuadrado generado por JS */
+.square {
+    /* El box-sizing: border-box asegura que el borde se incluya en el ancho/alto calculado */
+    border: 1px solid #ddd;
+    /* La opacidad inicial es 0 (invisible), se revelará al hacer hover */
+    opacity: 0; 
+    /* Transición suave para el efecto de dibujo */
+    transition: opacity 0.1s ease-in-out; 
+}
